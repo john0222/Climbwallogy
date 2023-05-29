@@ -46,7 +46,7 @@ int main() {
     int secondItemScore = secondItemScores[secondItemChoice];
     system("cls");
     // 第三項目選項及其分數
-    std::vector<std::string> thirdItemOptions = {"Drink with plastic bag or paper bag", "Paper cup drink", "Cumbuy/CoCo/上宇林", "none"};
+    std::vector<std::string> thirdItemOptions = {"Drink with plastic bag or paper bag", "Paper cup drink", "Cumbuy/CoCo/Shang Yu Lin", "none"};
     std::map<int, float> thirdItemScores = {{1, -5}, {2, -10}, {3, -5}, {4,0}};
     int thirdItemChoice = getUserChoice(thirdItemOptions);
     int thirdItemScore = thirdItemScores[thirdItemChoice];
