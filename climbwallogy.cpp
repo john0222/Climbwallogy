@@ -7,7 +7,7 @@ int getUserChoice(const std::vector<std::string>& options) {
     int choice;
     while (true) {
         std::cout << "Input your choice or conditions:" << std::endl;
-        for (size_t i = 0; i < options.size(); ++i) {
+        for (size_t i = 0; i < options.size(); i++) {
             std::cout << i + 1 << ". " << options[i] << std::endl;
         }
         std::cin >> choice;
@@ -40,14 +40,14 @@ int main() {
     system("cls");
     // 第二項目選項及其分數
     std::vector<std::string> secondItemOptions = {"*New basement", "*New restroom", "*New fence", "*New asshole", "Gong Yi Kwan", "Sport field new spot", "Fake mountain", "Acitvites Center"};
-    std::map<int, int> secondItemScores = {{1, 30}, {2, 10}, {3, -100}, {4, 15}, {5, 30}, {6, 25}, {7, 20}, {8, 0}};
+    std::map<int,float> secondItemScores = {{1, 30}, {2, 10}, {3, -100}, {4, 15}, {5, 30}, {6, 25}, {7, 20}, {8, 0}};
     std::cout<<"*New means new building"<< std::endl;
     int secondItemChoice = getUserChoice(secondItemOptions);
     int secondItemScore = secondItemScores[secondItemChoice];
     system("cls");
     // 第三項目選項及其分數
     std::vector<std::string> thirdItemOptions = {"Drink with plastic bag or paper bag", "Paper cup drink", "Cumbuy/CoCo/上宇林"};
-    std::map<int, int> thirdItemScores = {{1, -5}, {2, -10}, {3, -5}};
+    std::map<int, float> thirdItemScores = {{1, -5}, {2, -10}, {3, -5}};
     int thirdItemChoice = getUserChoice(thirdItemOptions);
     int thirdItemScore = thirdItemScores[thirdItemChoice];
     system("cls");
@@ -65,6 +65,9 @@ int main() {
     std::cout << "第二項目得分：" << secondItemScore << std::endl;
     std::cout << "第三項目得分：" << thirdItemScore << std::endl;
     std::cout << "總分：" << totalScore << std::endl;
+    switch (totalScore){
+        case (totalScore > 80):
+    }
     system("pause");
     return 0;
     }
