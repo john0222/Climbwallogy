@@ -65,9 +65,23 @@ int main() {
     std::cout << "第二項目得分：" << secondItemScore << std::endl;
     std::cout << "第三項目得分：" << thirdItemScore << std::endl;
     std::cout << "總分：" << totalScore << std::endl;
-    switch (totalScore){
-        case (totalScore > 80):
-    }
+
+        if (totalScore > 80){
+            std::cout<<"Go with ease"<<std::endl;
+        }
+        else if (totalScore < 80 &&totalScore > 60){
+            std::cout<<"Just go"<<std::endl;
+        }
+        else if (totalScore < 60 &&totalScore > 40){
+            std::cout<<"Go but be careful"<<std::endl;
+        }
+        else if (totalScore < 40 &&totalScore > 20){
+            std::cout<<"You'd better not go"<<std::endl;
+        }
+        else {
+            std::cout<<"DON'T DO THIS"<<std::endl;
+        }
+       
     system("pause");
     return 0;
     }
